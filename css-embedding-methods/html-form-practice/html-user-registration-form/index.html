@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Đăng Ký Người Dùng</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #eef2f5;
+            padding: 30px;
+        }
+        .register-container {
+            background-color: #ffffff;
+            width: 450px;
+            margin: 0 auto;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #333;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .radio-group {
+            margin-top: 5px;
+        }
+        .radio-group label {
+            font-weight: normal;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .btn-submit {
+            width: 100%;
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn-submit:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>ĐĂNG KÝ NGƯỜI DÙNG</h2>
+
+        <form action="http://demo.codegym.vn/6/registration_form/register.php" method="POST">
+
+            <div class="form-group">
+                <label for="name">Họ và tên:</label>
+                <input type="text" id="name" name="name" placeholder="Nhập họ và tên..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Nhập email..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại..." required>
+            </div>
+
+            <div class="form-group">
+                <label>Giới tính:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="Nam" checked> Nam</label>
+                    <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" class="btn-submit" value="Đăng ký">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
